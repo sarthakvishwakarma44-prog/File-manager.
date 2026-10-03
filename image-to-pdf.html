@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image to PDF Converter - JPG, PNG to PDF Free</title>
+  <meta name="description" content="Convert JPG, PNG and other images into one PDF. Free, private, runs in your browser.">
+  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f4c4.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f4c4.svg" alt="" width="32" height="32"> PDFKit</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Merge PDF</a></li>
+        <li><a href="split-pdf.html">Split PDF</a></li>
+        <li><a href="compress-pdf.html">Compress PDF</a></li>
+        <li><a href="image-to-pdf.html" aria-current="page">Image to PDF</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="tool" aria-labelledby="page-title">
+      <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f5bc.svg" alt="" width="88" height="88">
+      <h1 id="page-title">Image to PDF</h1>
+      <p class="lead">Turn photos and pictures into a single PDF. Your images are never uploaded.</p>
+      <ul class="badges"><li>100% private</li><li>Free forever</li><li>No sign-up</li></ul>
+
+      <div id="drop-zone" class="drop-zone" tabindex="0">
+        <p class="drop-title">Drop images here</p>
+        <p class="drop-or">or</p>
+        <label for="file-input" class="btn btn-primary">Choose images</label>
+        <input type="file" id="file-input" accept="image/*" multiple hidden>
+      </div>
+
+      <div id="work" class="file-section" hidden>
+        <div class="file-section-head">
+          <h2>Your images</h2>
+          <p class="hint">Use the arrows to change the order. Each image becomes one page.</p>
+        </div>
+        <ul id="file-list" class="file-list"></ul>
+        <fieldset class="options">
+          <legend>Page settings</legend>
+          <div class="field-row">
+            <div class="field">
+              <label for="page-size">Page size</label>
+              <select id="page-size">
+                <option value="a4">A4</option>
+                <option value="letter">US Letter</option>
+                <option value="fit">Same as image</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="margin">Margin</label>
+              <select id="margin">
+                <option value="0">None</option>
+                <option value="24" selected>Small</option>
+                <option value="48">Big</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        <div class="actions">
+          <button id="add-more" class="btn btn-secondary" type="button">Add more images</button>
+          <button id="clear-all" class="btn btn-secondary" type="button">Clear all</button>
+          <button id="action-btn" class="btn btn-primary" type="button" disabled>Convert to PDF</button>
+        </div>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <div id="result" class="result" hidden>
+        <h2>Your PDF is ready</h2>
+        <a id="download-link" class="btn btn-primary" href="#" download>Download</a>
+        <button id="start-over" class="btn btn-secondary" type="button">Start over</button>
+      </div>
+    </section>
+
+    <aside class="ad-slot" aria-label="Advertisement">
+    </aside>
+
+    <section class="info">
+      <h2>How it works</h2>
+      <ol>
+        <li>Select or drop one or more images (JPG, PNG, WebP).</li>
+        <li>Use the arrows to put them in order and pick a page size.</li>
+        <li>Click Convert to PDF and download the result.</li>
+      </ol>
+
+      <h2>Free, fast and private</h2>
+      <p>Everything runs inside your browser. Your files are never uploaded to a server, and there is no sign-up or watermark.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Which image formats work?</summary>
+        <p>JPG, PNG, WebP, GIF and BMP. Other formats may not be supported by your browser.</p>
+      </details>
+      <details>
+        <summary>Does each image get its own page?</summary>
+        <p>Yes, one image per page, in the order shown in the list.</p>
+      </details>
+      <details>
+        <summary>Will my images lose quality?</summary>
+        <p>JPG and PNG are added without re-compression, so quality is kept.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#">Back to top.</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 PDFKit. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="common.js"></script>
+  <script src="image-to-pdf.js"></script>
+
+</body>
+</html>

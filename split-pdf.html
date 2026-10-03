@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Split PDF Online - Extract Pages Free</title>
+  <meta name="description" content="Split a PDF or extract pages into a new file. Free, private, runs in your browser.">
+  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f4c4.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f4c4.svg" alt="" width="32" height="32"> PDFKit</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Merge PDF</a></li>
+        <li><a href="split-pdf.html" aria-current="page">Split PDF</a></li>
+        <li><a href="compress-pdf.html">Compress PDF</a></li>
+        <li><a href="image-to-pdf.html">Image to PDF</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="tool" aria-labelledby="page-title">
+      <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/2702.svg" alt="" width="88" height="88">
+      <h1 id="page-title">Split PDF</h1>
+      <p class="lead">Pull out the pages you need, or split every page into its own file. Your PDF never leaves your device.</p>
+      <ul class="badges"><li>100% private</li><li>Free forever</li><li>No sign-up</li></ul>
+
+      <div id="drop-zone" class="drop-zone" tabindex="0">
+        <p class="drop-title">Drop a PDF file here</p>
+        <p class="drop-or">or</p>
+        <label for="file-input" class="btn btn-primary">Choose PDF file</label>
+        <input type="file" id="file-input" accept="application/pdf" hidden>
+      </div>
+
+      <div id="work" class="file-section" hidden>
+      <div class="file-section-head">
+        <h2 id="file-name"></h2>
+        <p class="hint" id="file-info"></p>
+      </div>
+        <fieldset class="options">
+          <legend>Split mode</legend>
+          <label class="option"><input type="radio" name="mode" value="range" checked> Extract pages into one PDF</label>
+          <div id="range-field" class="field">
+            <label for="range-input">Pages to extract</label>
+            <input type="text" id="range-input" placeholder="e.g. 1-3, 5, 8-10" autocomplete="off">
+          </div>
+          <label class="option"><input type="radio" name="mode" value="all"> Split every page into its own PDF (ZIP file)</label>
+        </fieldset>
+        <div class="actions">
+          <button id="choose-other" class="btn btn-secondary" type="button">Choose another file</button>
+          <button id="action-btn" class="btn btn-primary" type="button">Split PDF</button>
+        </div>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <div id="result" class="result" hidden>
+        <h2>Your file is ready</h2>
+        <a id="download-link" class="btn btn-primary" href="#" download>Download</a>
+        <button id="start-over" class="btn btn-secondary" type="button">Start over</button>
+      </div>
+    </section>
+
+    <aside class="ad-slot" aria-label="Advertisement">
+    </aside>
+
+    <section class="info">
+      <h2>How it works</h2>
+      <ol>
+        <li>Select or drop one PDF file.</li>
+        <li>Choose to extract certain pages, or split every page.</li>
+        <li>Click Split PDF and download the result.</li>
+      </ol>
+
+      <h2>Free, fast and private</h2>
+      <p>Everything runs inside your browser. Your files are never uploaded to a server, and there is no sign-up or watermark.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>How do I type page ranges?</summary>
+        <p>Use commas and dashes, for example 1-3, 5, 8-10 gives pages 1, 2, 3, 5, 8, 9 and 10.</p>
+      </details>
+      <details>
+        <summary>What do I get when I split every page?</summary>
+        <p>A ZIP file with one PDF per page, named in order.</p>
+      </details>
+      <details>
+        <summary>Can I split a password-protected PDF?</summary>
+        <p>No. Remove the password first, then split the file.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#">Back to top.</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 PDFKit. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="common.js"></script>
+  <script src="split.js"></script>
+
+</body>
+</html>

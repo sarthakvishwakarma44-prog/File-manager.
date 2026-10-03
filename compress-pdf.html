@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compress PDF Online - Reduce File Size Free</title>
+  <meta name="description" content="Make a PDF smaller for email and uploads. Free and private, runs in your browser.">
+  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f4c4.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f4c4.svg" alt="" width="32" height="32"> PDFKit</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Merge PDF</a></li>
+        <li><a href="split-pdf.html">Split PDF</a></li>
+        <li><a href="compress-pdf.html" aria-current="page">Compress PDF</a></li>
+        <li><a href="image-to-pdf.html">Image to PDF</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="tool" aria-labelledby="page-title">
+      <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f5dc.svg" alt="" width="88" height="88">
+      <h1 id="page-title">Compress PDF</h1>
+      <p class="lead">Reduce the size of a large PDF so it is easy to email or upload. Your file stays on your device.</p>
+      <ul class="badges"><li>100% private</li><li>Free forever</li><li>No sign-up</li></ul>
+
+      <div id="drop-zone" class="drop-zone" tabindex="0">
+        <p class="drop-title">Drop a PDF file here</p>
+        <p class="drop-or">or</p>
+        <label for="file-input" class="btn btn-primary">Choose PDF file</label>
+        <input type="file" id="file-input" accept="application/pdf" hidden>
+      </div>
+
+      <div id="work" class="file-section" hidden>
+      <div class="file-section-head">
+        <h2 id="file-name"></h2>
+        <p class="hint" id="file-info"></p>
+      </div>
+        <fieldset class="options">
+          <legend>Compression level</legend>
+          <label class="option"><input type="radio" name="level" value="light"> Light - best quality, smaller saving</label>
+          <label class="option"><input type="radio" name="level" value="medium" checked> Medium - balanced</label>
+          <label class="option"><input type="radio" name="level" value="strong"> Strong - smallest file, lower quality</label>
+        </fieldset>
+        <p class="notice">Note: compressing turns each page into an image, so text can no longer be selected or searched.</p>
+        <div class="actions">
+          <button id="choose-other" class="btn btn-secondary" type="button">Choose another file</button>
+          <button id="action-btn" class="btn btn-primary" type="button">Compress PDF</button>
+        </div>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <div id="result" class="result" hidden>
+        <h2>Your file is ready</h2>
+        <a id="download-link" class="btn btn-primary" href="#" download>Download</a>
+        <button id="start-over" class="btn btn-secondary" type="button">Start over</button>
+      </div>
+    </section>
+
+    <aside class="ad-slot" aria-label="Advertisement">
+    </aside>
+
+    <section class="info">
+      <h2>How it works</h2>
+      <ol>
+        <li>Select or drop one PDF file.</li>
+        <li>Pick a compression level.</li>
+        <li>Click Compress PDF and download the smaller file.</li>
+      </ol>
+
+      <h2>Free, fast and private</h2>
+      <p>Everything runs inside your browser. Your files are never uploaded to a server, and there is no sign-up or watermark.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Why can I not select text after compressing?</summary>
+        <p>To shrink the file, each page is saved as an image. This works best for scans and photo-heavy PDFs.</p>
+      </details>
+      <details>
+        <summary>Which level should I choose?</summary>
+        <p>Start with Medium. Use Strong if the file is still too big, or Light if quality matters most.</p>
+      </details>
+      <details>
+        <summary>Why did it say my PDF is already small?</summary>
+        <p>If the result would not be smaller than the original, we do not offer it. Keep the original or try Strong.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#">Back to top.</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 PDFKit. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="common.js"></script>
+  <script src="compress.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merge PDF Online - Free, Fast and Private</title>
+  <meta name="description" content="Combine multiple PDF files into one document for free. Files stay in your browser and are never uploaded.">
+  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f4c4.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f4c4.svg" alt="" width="32" height="32"> PDFKit</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Merge PDF</a></li>
+        <li><a href="split-pdf.html">Split PDF</a></li>
+        <li><a href="compress-pdf.html">Compress PDF</a></li>
+        <li><a href="image-to-pdf.html">Image to PDF</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="tool" aria-labelledby="page-title">
+      <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f4da.svg" alt="" width="88" height="88">
+      <h1 id="page-title">Merge PDF files</h1>
+      <p class="lead">Combine several PDFs into one. Everything runs in your browser, so your files are never uploaded.</p>
+      <ul class="badges"><li>100% private</li><li>Free forever</li><li>No sign-up</li></ul>
+
+      <div id="drop-zone" class="drop-zone" tabindex="0">
+        <p class="drop-title">Drop PDF files here</p>
+        <p class="drop-or">or</p>
+        <label for="file-input" class="btn btn-primary">Choose PDF files</label>
+        <input type="file" id="file-input" accept="application/pdf" multiple hidden>
+      </div>
+
+      <div id="file-section" class="file-section" hidden>
+        <div class="file-section-head">
+          <h2>Your files</h2>
+          <p class="hint">Drag to reorder. The first file comes first in the merged PDF.</p>
+        </div>
+
+        <ul id="file-list" class="file-list">
+        </ul>
+
+        <div class="actions">
+          <button id="add-more" class="btn btn-secondary" type="button">Add more files</button>
+          <button id="clear-all" class="btn btn-secondary" type="button">Clear all</button>
+          <button id="merge-btn" class="btn btn-primary" type="button" disabled>Merge PDFs</button>
+        </div>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <div id="result" class="result" hidden>
+        <h2>Your merged PDF is ready</h2>
+        <a id="download-link" class="btn btn-primary" download="merged.pdf" href="#">Download merged.pdf</a>
+        <button id="start-over" class="btn btn-secondary" type="button">Merge more files</button>
+      </div>
+    </section>
+
+    <aside class="ad-slot" aria-label="Advertisement">
+    </aside>
+
+    <section class="info">
+      <h2>How to merge PDF files</h2>
+      <ol>
+        <li>Select or drop two or more PDF files.</li>
+        <li>Drag the files into the order you want.</li>
+        <li>Click Merge PDFs, then download the result.</li>
+      </ol>
+
+      <h2>Why use this tool</h2>
+      <ul>
+        <li><strong>Private:</strong> files are processed on your device and never leave it. We never store your files on any server. Just works done and removed from memory.</li>
+        <li><strong>Free:</strong> no sign-up, no watermark, no file limit.</li>
+        <li><strong>Works everywhere:</strong> phone, tablet, or computer, in any modern browser.</li>
+      </ul>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Is it safe to merge confidential PDFs here?</summary>
+        <p>Yes. The merge happens inside your browser, so your documents are not sent to any server.</p>
+      </details>
+      <details>
+        <summary>Is there a limit on file size?</summary>
+        <p>There is no fixed limit, but very large files depend on your device's memory.</p>
+      </details>
+      <details>
+        <summary>Can I merge password-protected PDFs?</summary>
+        <p>No. Remove the password first, then merge the files.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#">Back to top.</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 PDFKit. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

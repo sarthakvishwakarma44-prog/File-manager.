@@ -1,4 +1,4 @@
-# File-manager.
+# PDFalo.
 <hr>
 <ul>
     <li><strong>Private:</strong> files are processed on your device and never leave it. We never store your files on any server. Just works done and removed from memory.</li>

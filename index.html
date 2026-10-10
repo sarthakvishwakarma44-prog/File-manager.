@@ -45,8 +45,7 @@
           <p class="hint">Drag to reorder. The first file comes first in the merged PDF.</p>
         </div>
 
-        <ul id="file-list" class="file-list">
-        </ul>
+        <ul id="file-list" class="file-list"></ul>
 
         <div class="actions">
           <button id="add-more" class="btn btn-secondary" type="button">Add more files</button>
@@ -64,36 +63,69 @@
       </div>
     </section>
 
-    <aside class="ad-slot" aria-label="Advertisement">
-    </aside>
-
     <section class="info">
-      <h2>How to merge PDF files</h2>
+      <h2>How to merge PDF files online</h2>
       <ol>
-        <li>Select or drop two or more PDF files.</li>
-        <li>Drag the files into the order you want.</li>
-        <li>Click Merge PDFs, then download the result.</li>
+        <li>Click <strong>Choose PDF files</strong> or drag your PDFs into the box. You can select many files at once and add more later with <strong>Add more files</strong>.</li>
+        <li>Check the list. Each row shows the file name, the number of pages and the file size, so you can spot a wrong file quickly.</li>
+        <li>Drag a file up or down to change its position. The file at the top becomes the first pages of the merged document.</li>
+        <li>Click <strong>Merge PDFs</strong>. For normal documents it takes a few seconds.</li>
+        <li>Click the download button to save <strong>merged.pdf</strong> to your phone or computer.</li>
       </ol>
 
-      <h2>Why use this tool</h2>
+      <h2>When do you need to merge PDFs?</h2>
+      <p>Many websites and offices accept only one file per upload. Combining your documents into a single PDF keeps everything together and in the right order. Common situations include:</p>
       <ul>
-        <li><strong>Private:</strong> files are processed on your device and never leave it. We never store your files on any server. Just works done and removed from memory.</li>
-        <li><strong>Free:</strong> no sign-up, no watermark, no file limit.</li>
-        <li><strong>Works everywhere:</strong> phone, tablet, or computer, in any modern browser.</li>
+        <li><strong>Job and college applications:</strong> a resume, cover letter, certificates and ID in one file.</li>
+        <li><strong>Invoices and receipts:</strong> a month of bills combined for an expense report or tax filing.</li>
+        <li><strong>School work:</strong> several chapters or assignments sent as one document.</li>
+        <li><strong>Scanned pages:</strong> phone scanner apps often save each page separately, and merging joins them into one document.</li>
+        <li><strong>Contracts and legal papers:</strong> the agreement and all its attachments in one place.</li>
+      </ul>
+
+      <h2>Tips for a clean result</h2>
+      <h3>Check the order before merging</h3>
+      <p>It is much faster to fix the order in the list than to rearrange pages afterwards. Name your files with numbers, such as 01-resume.pdf and 02-certificate.pdf, so they are easy to recognise.</p>
+      <h3>Mixed page sizes are normal</h3>
+      <p>If one file uses A4 pages and another uses Letter pages, each page keeps its own size. The merged file will contain both, which is fine for viewing and printing.</p>
+      <h3>Large files</h3>
+      <p>The merge happens on your own device, so very large files depend on your available memory. If a merge fails, try merging fewer files at a time, or compress the biggest file first with our Compress PDF tool.</p>
+
+      <h2>Your files stay private</h2>
+      <p>This tool does not upload anything. Your PDFs are read and combined inside your web browser, and the result is created on your device. Nothing is sent to our servers, so it is suitable for personal and confidential documents. When you close or refresh the page, the files are gone from memory.</p>
+
+      <h2>Common problems and fixes</h2>
+      <ul>
+        <li><strong>"Could not read" message:</strong> the file is damaged or protected with a password. Remove the password in your PDF viewer, save a copy, and try again.</li>
+        <li><strong>The merge button is grey:</strong> you need at least two PDF files in the list.</li>
+        <li><strong>A file was skipped:</strong> only files with the .pdf extension are accepted. Convert images with our Image to PDF tool first.</li>
+        <li><strong>Bookmarks or form fields are missing:</strong> the tool copies the pages themselves, so document-level extras may not carry over.</li>
       </ul>
 
       <h2>Frequently asked questions</h2>
       <details>
         <summary>Is it safe to merge confidential PDFs here?</summary>
-        <p>Yes. The merge happens inside your browser, so your documents are not sent to any server.</p>
+        <p>Yes. The merge happens inside your browser, so your documents are never sent to a server.</p>
       </details>
       <details>
-        <summary>Is there a limit on file size?</summary>
-        <p>There is no fixed limit, but very large files depend on your device's memory.</p>
+        <summary>Is there a limit on file size or number of files?</summary>
+        <p>There is no fixed limit. Very large files depend on your device's memory, so merge in smaller groups if you see an error.</p>
+      </details>
+      <details>
+        <summary>Will the quality of my pages change?</summary>
+        <p>No. Pages are copied as they are, so text stays sharp and selectable and images are not re-compressed.</p>
       </details>
       <details>
         <summary>Can I merge password-protected PDFs?</summary>
         <p>No. Remove the password first, then merge the files.</p>
+      </details>
+      <details>
+        <summary>Does it work on a phone?</summary>
+        <p>Yes. It works in modern mobile browsers. Reordering by dragging can be awkward on small screens, so choose the files in the order you want.</p>
+      </details>
+      <details>
+        <summary>Do I need to create an account?</summary>
+        <p>No. There is no sign-up, no watermark and no fee.</p>
       </details>
     </section>
 
@@ -102,7 +134,10 @@
   <footer class="site-footer">
     <nav aria-label="Footer">
       <ul>
-        <li><a href="#">Back to top.</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
       </ul>
     </nav>
     <p>&copy; 2026 PDFalo. All rights reserved.</p>
@@ -111,5 +146,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
   <script src="script.js"></script>
 
+  <script src="back-to-top.js"></script>
 </body>
 </html>

@@ -7,8 +7,6 @@
   <meta name="description" content="Make a PDF smaller for email and uploads. Free and private, runs in your browser.">
   <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.0/assets/svg/1f4c4.svg">
   <link rel="stylesheet" href="style.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9622872489807015"
-     crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -66,32 +64,55 @@
       </div>
     </section>
 
-    <aside class="ad-slot" aria-label="Advertisement">
-    </aside>
-
     <section class="info">
-      <h2>How it works</h2>
+      <h2>How to compress a PDF online</h2>
       <ol>
-        <li>Select or drop one PDF file.</li>
-        <li>Pick a compression level.</li>
-        <li>Click Compress PDF and download the smaller file.</li>
+        <li>Click <strong>Choose PDF file</strong> or drag a PDF into the box.</li>
+        <li>Choose a compression level: <strong>Light</strong> keeps the best quality, <strong>Medium</strong> is balanced, and <strong>Strong</strong> gives the smallest file.</li>
+        <li>Click <strong>Compress PDF</strong>. The tool shows its progress page by page.</li>
+        <li>Download the new file. The page shows the old size, the new size and how much smaller it is.</li>
       </ol>
 
-      <h2>Free, fast and private</h2>
-      <p>Everything runs inside your browser. Your files are never uploaded to a server, and there is no sign-up or watermark.</p>
+      <h2>How this tool compresses</h2>
+      <p>To make the file smaller, each page is drawn as a picture and saved as a compressed JPEG image. A lower level reduces the picture's sharpness and quality more, which is what makes the file smaller. This works very well for scanned documents and PDFs full of photos, because those files already consist of large images.</p>
+
+      <h2>An important limitation</h2>
+      <p>Because pages become pictures, the text in the compressed file can no longer be selected, copied or searched. If you need searchable text, keep the original file as well. PDFs that contain mostly text are already small, so they often cannot be reduced much, and in that case the tool tells you instead of giving you a bigger file.</p>
+
+      <h2>Which level should you choose?</h2>
+      <ul>
+        <li><strong>Light:</strong> for documents that will be printed or read closely, where you want to keep detail.</li>
+        <li><strong>Medium:</strong> a good starting point for email attachments and online forms.</li>
+        <li><strong>Strong:</strong> when a website or email limit is strict and quality matters less, such as a rough scan of a bill.</li>
+      </ul>
+      <p>If the first result is still too large, run the original file again with a stronger level. Compressing an already compressed file repeatedly lowers quality more each time, so always start from the original.</p>
+
+      <h2>Common upload limits</h2>
+      <p>Many job portals, government forms and email services limit attachments to a few megabytes. Compress the PDF, check its size, and upload the smaller version. If you have several files, you can merge them first and compress the combined file afterwards.</p>
+
+      <h2>Privacy</h2>
+      <p>Compression runs inside your browser. Your PDF is not uploaded, and the smaller file is created on your own device.</p>
 
       <h2>Frequently asked questions</h2>
       <details>
         <summary>Why can I not select text after compressing?</summary>
-        <p>To shrink the file, each page is saved as an image. This works best for scans and photo-heavy PDFs.</p>
+        <p>Each page is saved as an image to reduce the size. Keep the original file if you need searchable text.</p>
       </details>
       <details>
-        <summary>Which level should I choose?</summary>
-        <p>Start with Medium. Use Strong if the file is still too big, or Light if quality matters most.</p>
+        <summary>Why did the tool say my PDF is already small?</summary>
+        <p>If the compressed version would not be smaller than the original, the tool does not offer it. Try the Strong level or keep the original.</p>
       </details>
       <details>
-        <summary>Why did it say my PDF is already small?</summary>
-        <p>If the result would not be smaller than the original, we do not offer it. Keep the original or try Strong.</p>
+        <summary>Is there a file size limit?</summary>
+        <p>There is no fixed limit, but large files take longer and depend on your device's memory.</p>
+      </details>
+      <details>
+        <summary>Will my file be uploaded anywhere?</summary>
+        <p>No. All the work happens in your browser on your own device.</p>
+      </details>
+      <details>
+        <summary>Can I compress a password-protected PDF?</summary>
+        <p>No. Remove the password first, then compress the unlocked copy.</p>
       </details>
     </section>
 
@@ -100,7 +121,10 @@
   <footer class="site-footer">
     <nav aria-label="Footer">
       <ul>
-        <li><a href="#">Back to top.</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
       </ul>
     </nav>
     <p>&copy; 2026 PDFalo. All rights reserved.</p>
@@ -111,5 +135,6 @@
   <script src="common.js"></script>
   <script src="compress.js"></script>
 
+  <script src="back-to-top.js"></script>
 </body>
 </html>

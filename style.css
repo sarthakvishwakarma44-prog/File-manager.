@@ -173,6 +173,7 @@ main {
   margin-bottom: 1rem;
   color: var(--muted);
 }
+
 .file-section {
   margin-top: 2rem;
   text-align: left;
@@ -480,4 +481,45 @@ details { background: var(--bg); box-shadow: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .tool-icon { animation: none; }
+}
+
+.page-content {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+.page-content h1 {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--accent);
+}
+.page-content h2, .info h2 { margin-top: 2rem; }
+.page-content h2:first-of-type { margin-top: 1.5rem; }
+.updated { color: var(--muted); font-size: 0.9rem; }
+.info h3 { margin: 1.25rem 0 0.4rem; font-size: 1.05rem; }
+
+#back-to-top {
+  position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 20;
+  width: 48px; height: 48px; border: 0; border-radius: 50%;
+  background: var(--grad); color: #fff; font-size: 1.4rem; cursor: pointer;
+  box-shadow: 0 6px 16px rgba(90, 60, 230, 0.4);
+  opacity: 0; visibility: hidden; transform: translateY(16px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+#back-to-top.show { opacity: 1; visibility: visible; transform: none; }
+#back-to-top:hover { filter: brightness(1.15); }
+
+.tool, .info, .page-content { animation: fadeUp 0.6s ease both; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tool, .info, .page-content { animation: none; }
 }

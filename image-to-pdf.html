@@ -82,32 +82,61 @@
       </div>
     </section>
 
-    <aside class="ad-slot" aria-label="Advertisement">
-    </aside>
-
     <section class="info">
-      <h2>How it works</h2>
+      <h2>How to convert images to PDF</h2>
       <ol>
-        <li>Select or drop one or more images (JPG, PNG, WebP).</li>
-        <li>Use the arrows to put them in order and pick a page size.</li>
-        <li>Click Convert to PDF and download the result.</li>
+        <li>Click <strong>Choose images</strong> or drag your pictures into the box. You can add JPG, PNG, WebP, GIF and BMP files.</li>
+        <li>Use the up and down arrows to put the images in the order you want. Each image becomes one page.</li>
+        <li>Choose a page size (A4, US Letter, or the same size as the image) and a margin.</li>
+        <li>Click <strong>Convert to PDF</strong> and download <strong>images.pdf</strong>.</li>
       </ol>
 
-      <h2>Free, fast and private</h2>
-      <p>Everything runs inside your browser. Your files are never uploaded to a server, and there is no sign-up or watermark.</p>
+      <h2>Choosing the page size</h2>
+      <ul>
+        <li><strong>A4:</strong> the standard paper size in most of the world, best for documents you may print.</li>
+        <li><strong>US Letter:</strong> the standard in the United States and Canada.</li>
+        <li><strong>Same as image:</strong> each page matches its picture exactly, which is ideal for photos and screenshots.</li>
+      </ul>
+      <p>For A4 and Letter, the image is scaled to fit inside the page without being stretched, and it is centred. A wide picture automatically gets a landscape page, so it is not shrunk onto a tall one.</p>
+
+      <h2>When is this useful?</h2>
+      <ul>
+        <li><strong>Document uploads:</strong> turn photos of certificates, ID cards or bills into one PDF for an online form.</li>
+        <li><strong>Scanned notes:</strong> combine phone photos of handwritten pages into a single file.</li>
+        <li><strong>Receipts:</strong> keep all receipts from a trip in one document.</li>
+        <li><strong>Portfolios:</strong> put artwork or design screenshots into one shareable file.</li>
+      </ul>
+
+      <h2>Tips for good results</h2>
+      <ul>
+        <li>Take photos in good light and hold the phone straight above the page to avoid shadows and skewed edges.</li>
+        <li>JPG and PNG pictures are added without being re-compressed, so their quality is kept. Very large photos make a large PDF, which you can shrink afterwards with our Compress PDF tool.</li>
+        <li>Check the order in the list before converting. It is the order of the pages.</li>
+      </ul>
+
+      <h2>Privacy</h2>
+      <p>The conversion happens inside your browser. Your images are not uploaded to any server.</p>
 
       <h2>Frequently asked questions</h2>
       <details>
-        <summary>Which image formats work?</summary>
+        <summary>Which image formats are supported?</summary>
         <p>JPG, PNG, WebP, GIF and BMP. Other formats may not be supported by your browser.</p>
       </details>
       <details>
         <summary>Does each image get its own page?</summary>
-        <p>Yes, one image per page, in the order shown in the list.</p>
+        <p>Yes. One image per page, in the order shown in the list.</p>
       </details>
       <details>
         <summary>Will my images lose quality?</summary>
-        <p>JPG and PNG are added without re-compression, so quality is kept.</p>
+        <p>JPG and PNG images are placed in the PDF without re-compression, so their quality is kept.</p>
+      </details>
+      <details>
+        <summary>Can I add more images after choosing the first ones?</summary>
+        <p>Yes. Use the Add more images button, then reorder with the arrows.</p>
+      </details>
+      <details>
+        <summary>Why was one of my images skipped?</summary>
+        <p>The file may be damaged or in a format your browser cannot read. Convert it to JPG or PNG and try again.</p>
       </details>
     </section>
 
@@ -116,7 +145,10 @@
   <footer class="site-footer">
     <nav aria-label="Footer">
       <ul>
-        <li><a href="#">Back to top.</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
       </ul>
     </nav>
     <p>&copy; 2026 PDFalo. All rights reserved.</p>
@@ -126,5 +158,6 @@
   <script src="common.js"></script>
   <script src="image-to-pdf.js"></script>
 
+  <script src="back-to-top.js"></script>
 </body>
 </html>

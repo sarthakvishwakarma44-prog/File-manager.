@@ -68,32 +68,59 @@
       </div>
     </section>
 
-    <aside class="ad-slot" aria-label="Advertisement">
-    </aside>
-
     <section class="info">
-      <h2>How it works</h2>
+      <h2>How to split a PDF online</h2>
       <ol>
-        <li>Select or drop one PDF file.</li>
-        <li>Choose to extract certain pages, or split every page.</li>
-        <li>Click Split PDF and download the result.</li>
+        <li>Click <strong>Choose PDF file</strong> or drag one PDF into the box. The page shows its name, page count and size.</li>
+        <li>Pick a mode. <strong>Extract pages</strong> creates one new PDF that contains only the pages you list. <strong>Split every page</strong> creates one PDF per page, delivered as a ZIP file.</li>
+        <li>For extraction, type the pages you want, for example <code>1-3, 5, 8-10</code>.</li>
+        <li>Click <strong>Split PDF</strong> and download your file.</li>
       </ol>
 
-      <h2>Free, fast and private</h2>
-      <p>Everything runs inside your browser. Your files are never uploaded to a server, and there is no sign-up or watermark.</p>
+      <h2>How to write page ranges</h2>
+      <p>Separate items with commas and use a dash for a range. For a 12-page document:</p>
+      <ul>
+        <li><code>1-3</code> gives pages 1, 2 and 3.</li>
+        <li><code>2, 7, 11</code> gives only those three pages.</li>
+        <li><code>1-3, 5, 8-10</code> gives pages 1, 2, 3, 5, 8, 9 and 10.</li>
+      </ul>
+      <p>Pages come out in the order you type them, so <code>5, 1</code> puts page 5 before page 1. If a number is outside the document, the tool tells you the allowed range instead of failing.</p>
+
+      <h2>When is splitting useful?</h2>
+      <ul>
+        <li><strong>Sending only what is needed:</strong> share one chapter, one invoice or one signed page instead of the whole file.</li>
+        <li><strong>Removing pages:</strong> extract everything except the pages you do not want, such as blank or private pages.</li>
+        <li><strong>Reducing file size:</strong> email a smaller part when the whole document is too large for an attachment.</li>
+        <li><strong>Separating a scan:</strong> a scanner that saved ten receipts in one PDF can be split into ten files.</li>
+        <li><strong>Reordering:</strong> extract pages in a new order, then merge them with other files.</li>
+      </ul>
+
+      <h2>What you get when you split every page</h2>
+      <p>The tool creates a ZIP file that holds one PDF for each page. The files are named after your original document with the page number added, for example <em>report-page-01.pdf</em>, <em>report-page-02.pdf</em> and so on, so they stay in order when sorted. Open the ZIP on your device to use the files.</p>
+
+      <h2>Privacy</h2>
+      <p>Splitting happens inside your browser. Your PDF is not uploaded to any server, and the new files are created on your own device.</p>
 
       <h2>Frequently asked questions</h2>
       <details>
-        <summary>How do I type page ranges?</summary>
-        <p>Use commas and dashes, for example 1-3, 5, 8-10 gives pages 1, 2, 3, 5, 8, 9 and 10.</p>
-      </details>
-      <details>
-        <summary>What do I get when I split every page?</summary>
-        <p>A ZIP file with one PDF per page, named in order.</p>
-      </details>
-      <details>
         <summary>Can I split a password-protected PDF?</summary>
-        <p>No. Remove the password first, then split the file.</p>
+        <p>No. Remove the password first in your PDF viewer, save a copy, and then split that copy.</p>
+      </details>
+      <details>
+        <summary>Does splitting reduce quality?</summary>
+        <p>No. The selected pages are copied exactly as they are, so text and images stay the same.</p>
+      </details>
+      <details>
+        <summary>Can I extract pages from different parts of the document?</summary>
+        <p>Yes. Use commas, for example 1-2, 6, 9-12. All of them go into one new PDF.</p>
+      </details>
+      <details>
+        <summary>Is my original file changed?</summary>
+        <p>No. Your original file is untouched. The tool only creates new files.</p>
+      </details>
+      <details>
+        <summary>Why did I get an error about the page range?</summary>
+        <p>A number may be outside the document or typed in an unsupported way. Use only digits, commas and dashes, such as 1-3, 5.</p>
       </details>
     </section>
 
@@ -102,7 +129,10 @@
   <footer class="site-footer">
     <nav aria-label="Footer">
       <ul>
-        <li><a href="#">Back to top.</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
       </ul>
     </nav>
     <p>&copy; 2026 PDFalo. All rights reserved.</p>
@@ -113,5 +143,6 @@
   <script src="common.js"></script>
   <script src="split.js"></script>
 
+  <script src="back-to-top.js"></script>
 </body>
 </html>
